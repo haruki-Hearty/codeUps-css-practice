@@ -1,0 +1,9 @@
+@use 'global'as *;
+
+.c-section-title-ja {
+  font-size: rem(16);
+  border-bottom: solid 2px $green;
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}

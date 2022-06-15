@@ -1,0 +1,10 @@
+@use 'global'as *;
+
+.c-section-title-en {
+  text-transform: uppercase;
+  font-size: rem(32);
+  font-weight: $bold;
+  @include mq(md) {
+    font-size: rem(48);
+  }
+}
