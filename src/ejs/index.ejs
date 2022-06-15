@@ -2,14 +2,26 @@
 <html lang="ja">
 <%- include('./common/_head') %>
   <body>
-    <%- include('./common/_top-header') %>
-      <%- include('./component/_c-btn',{text:'これはテストです', link:'#'}) %>
-    <%- include('./common/_footer') %>
+    <main>
+      <section class="l-blog">
+        <%- include('./project/_p-blog') %>
+      </section>
+  
+      <section class="l-staff-blog">
+        <%- include('./project/_p-section-title',{enTitle: 'staff blog', jaTitle:'スタッフブログ'}) %>
+      </section>
+  
+      <section class="l-news">
+        <%- include('./project/_p-section-title',{enTitle: 'news', jaTitle:'お知らせ'}) %>
+      </section>
+  
+      <section class="l-works">
+        <%- include('./project/_p-section-title',{enTitle: 'works', jaTitle:'実績'}) %>
+      </section>
+    </main>
 
 
-    <% for (var i=0; i < 4; i++) { %>
-      <%- include('./component/_c-btn',{text:'これはテストです', link:'#'}) %>
-      <% } %>
+    
 
 
   </body>
