@@ -1,0 +1,80 @@
+@use 'global'as *;
+
+.p-card {
+  max-width: rem(296);
+  width: 100%;
+  margin: 0 auto;
+  background: $gray;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.p-card__img-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.p-card__img-wrapper::before {
+  content: "";
+  display: block;
+  padding-top: 74.325%;
+}
+
+.p-card__img-wrapper img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.p-card__text-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: rem(20);
+  transition: all .4s;
+  z-index: 2;
+}
+
+.p-card__link {
+  display: block;
+}
+
+.p-card__text-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #3D593D;
+  transition: all .4s;
+  border-radius: 0 0 10px 10px;
+  z-index: -1;
+}
+
+.p-card__link:hover {
+  color: $lightGray;
+}
+
+.p-card__text-wrapper:hover::before {
+  left: 0;
+}
+
+.p-card__text-wrapper {
+  z-index: 2;
+}
+
+.p-card__title {
+  margin-bottom: rem(10);
+  font-size: rem(20);
+  font-weight: $normal;
+}
+
+.p-card__text {
+  font-size: rem(16);
+}

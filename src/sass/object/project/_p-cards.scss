@@ -1,0 +1,9 @@
+@use 'global'as *;
+
+.p-cards {
+  display: grid;
+  row-gap: rem(20);
+  @include mq(md) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

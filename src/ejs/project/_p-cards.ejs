@@ -1,0 +1,69 @@
+<% let blog = [
+    { title:"移転しました！", text:"東京都内に移転いたしますた。恵比寿駅から徒歩3分...",path: 'blog', num: "1", link: "#" },
+    { title:"創業16周年Party", text:"先日、創業16周年を迎えた我が社。日頃の感謝の気持ちを込めて...",path: 'blog', num: "2", link: "#" }, 
+    { title:"社員旅行", text:"1週間お休みをいただき、毎年恒例の社員旅行へ行かせていただきま...",path: 'blog', num: "3", link: "#" } 
+] %>
+<% let staffBlog = [
+    { title:"展示会in六本木", text:"4月17日に六本木で行われた家具の展示館に参加させていただきました。...",path: 'staff-blog', num: "1", link: "#" },
+    { title:"勉強会", text:"月に1回行われる当社の勉強会。今回は外部講師として◯◯さんにお越しいただき、レクシャーを行って...",path: 'staff-blog', num: "2", link: "#" }, 
+    { title:"家具のアウトレット", text:"千葉県にある家具のアウトレットショップへ行ってきました。店内に並ぶ家具の数が多いこと多...",path: 'staff-blog', num: "3", link: "#" },
+    { title:"海外出張in Paris", text:"みなさんこんにちは！私は今、海外出張でフランスのパリにきています。...",path: 'staff-blog', num: "4", link: "#" },
+    { title:"展示会inミラノ", text:"去年に引き続き、イタリアのミラノで毎年開催されている、ミラノサローネに参加して参りました。...",path: 'staff-blog', num: "5", link: "#" }, 
+    { title:"新作", text:"こんにちは。恵比寿店の◯◯です。今回は、5日前にイタリアから届いたばかりの新作のチェアーをご紹...",path: 'staff-blog', num: "6", link: "#" } 
+] %>
+<% let news = [
+    { title:"お部屋をコーディネート", text:"空間デザイナーをお呼びして、お部屋をおしゃれにコーディネート！プロからのアドバイスをも...",path: 'news', num: "1", link: "#" },
+    { title:"新作入荷！", text:"お待たせいたしました!イタリアよりヴィンテージソファーが入稿いたしました!1...",path: 'news', num: "2", link: "#" }, 
+    { title:"新作入荷！", text:"お待たせいたしました！パリより新作のソファーが入荷いたしました！...",path: 'news', num: "3", link: "#" },
+] %>
+<ul class="p-cards">
+  <% if( section == 'blog') { %>
+    <% blog.forEach(function (value) { %>
+      <li class="p-cards__item p-card">
+        <article>
+          <a class="p-card__link" href="<%= value.link %>">
+            <div class="p-card__img-wrapper">
+              <img src="./images/<%= value.path %>-img-<%= value.num %>.jpg" width="296" height="220" alt="">
+            </div>
+            <div class="p-card__text-wrapper">
+              <h3 class="p-card__title"><%= value.title %></h3>
+              <p class="p-card__text"><%= value.text %></p>
+            </div>
+          </a>
+        </article>
+      </li>  
+    <% }); %>
+  <% } else if (section == 'staff-blog') { %>
+    <% staffBlog.forEach(function (value) { %>
+      <li class="p-cards__item p-card">
+        <article>
+          <a class="p-card__link" href="<%= value.link %>">
+            <div class="p-card__img-wrapper">
+              <img src="./images/<%= value.path %>-img-<%= value.num %>.jpg" width="296" height="220" alt="">
+            </div>
+            <div class="p-card__text-wrapper">
+              <h3 class="p-card__title"><%= value.title %></h3>
+              <p class="p-card__text"><%= value.text %></p>
+            </div>
+          </a>
+        </article>
+      </li>
+    <% }); %>
+  <% } else if (section == 'news') { %>
+    <% news.forEach(function (value) { %>
+      <li class="p-cards__item p-card">
+        <article>
+          <a class="p-card__link" href="<%= value.link %>">
+            <div class="p-card__img-wrapper">
+              <img src="./images/<%= value.path %>-img-<%= value.num %>.jpg" width="296" height="220" alt="">
+            </div>
+            <div class="p-card__text-wrapper">
+              <h3 class="p-card__title"><%= value.title %></h3>
+              <p class="p-card__text"><%= value.text %></p>
+            </div>
+          </a>
+        </article>
+      </li>
+    <% }); %>
+  <% } %>  
+</ul>
