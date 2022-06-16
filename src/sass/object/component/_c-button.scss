@@ -1,0 +1,30 @@
+@use 'global'as *;
+
+.c-button {
+  position: relative;
+  display: inline-block;
+  padding: rem(8.5) rem(79);
+  font-size: rem(24);
+  font-weight: $bold;
+  text-transform: uppercase;
+  border-radius: rem(20);
+  z-index: 1;
+  transition: all .4s;
+  @include mq(md) {
+    font-size: rem(32);
+    padding: rem(10) rem(100);
+  }
+}
+
+.c-button--blog {
+  background: $darkGray;
+  color: $white;
+  overflow: hidden;
+  border: solid 1px $darkGray;
+  z-index: 2;
+}
+
+.c-button--blog:hover {
+  color: $darkGray;
+  background: $lightGray;
+}
