@@ -1,0 +1,20 @@
+<div class="p-news">
+  <div class="p-news__inner">
+    <div class="p-news__head">
+      <div class="p-news__title">
+        <%- include('../project/_p-section-title',{enTitle: 'news', jaTitle:'お知らせ'}) %>
+      </div>
+      <div class="p-news__description">
+        <%- include('../component/_c-section-description',{text: 'こちらでは、当店の最新情報を発信していきます。<br>入荷情報やSALEの情報などお得な情報ばかりですので、是非チェックしてみてください！'}) %>
+      </div>
+    </div>
+    <div class="p-news__body">
+      <div class="p-news__cards">
+        <%- include('../project/_p-cards',{section: 'news'}) %>
+      </div>
+      <div class="p-news__button">
+        <%- include('../component/_c-button',{text: 'news', modifire: 'c-button--news'}) %>
+      </div>
+    </div>
+  </div>
+</div>
