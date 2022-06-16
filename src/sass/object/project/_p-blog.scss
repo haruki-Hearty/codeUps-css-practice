@@ -1,0 +1,49 @@
+@use 'global'as *;
+
+.p-blog__head {
+  text-align: center;
+}
+
+.p-blog__title {
+  margin-bottom: rem(20);
+  @include mq(md) {
+    margin-bottom: rem(48);
+  }
+}
+
+.p-blog__description {
+  margin-bottom: rem(20);
+
+  @include mq(md) {
+    max-width: rem(490);
+    width: 100%;
+    margin: 0 auto rem(48);
+  
+  }
+}
+
+.p-blog__button {
+  text-align: center;
+}
+
+.p-blog__inner {
+  position: relative;
+  width: 100%;
+  padding: rem(40) 0 rem(100);
+  background: linear-gradient(90deg, rgba(80, 92, 75, 0.5) 0%, rgba(80, 92, 75, 0.5) 70%, transparent 70%, transparent 100%);
+  @include mq(md) {
+    padding: rem(92) 0;
+    background: linear-gradient(90deg, rgba(80, 92, 75, 0.5) 0%, rgba(80, 92, 75, 0.5) 50%, transparent 50%, transparent 100%);  
+  }
+}
+
+.p-blog__cards {
+  margin-bottom: rem(20);
+  @include mq(md) {
+    max-width: rem(1050);
+    width: 100%;
+    margin: 0 auto rem(57);
+    padding: 0 rem(25);
+  
+  }
+}

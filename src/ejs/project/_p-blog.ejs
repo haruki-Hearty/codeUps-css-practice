@@ -1,0 +1,21 @@
+<div class="p-blog">
+  <div class="p-blog__inner">
+    <div class="p-blog__head">
+      <div class="p-blog__title">
+        <%- include('../project/_p-section-title',{enTitle: 'blog', jaTitle:'ブログ'}) %>
+      </div>
+      <div class="p-blog__description">
+        <%- include('../component/_c-section-description',{text: 'ブログにて当店の魅力やスタッフの日常などを発信しております。是非、ご覧ください！'}) %>
+      </div>
+    </div>
+    <div class="p-blog__body">
+      <div class="p-blog__cards">
+        <%- include('../project/_p-cards',{section: 'blog'}) %>
+      </div>
+      <div class="p-blog__button">
+        <%- include('../component/_c-button',{text: 'blog', modifire: 'c-button--blog'}) %>
+      </div>
+    </div>
+  </div>
+
+</div>
