@@ -1,0 +1,21 @@
+<div class="p-works">
+  <div class="p-works__inner">
+    <div class="p-works__head">
+      <div class="p-works__title">
+        <%- include('../project/_p-section-title',{enTitle: 'works', jaTitle:'実績'}) %>
+      </div>
+      <div class="p-works__description">
+        <%- include('../component/_c-section-description',{text: 'これまでに当社にてインテリアコーディネートを担当させていただきました実績をご紹介させていただきます。<br>店舗からご自宅まで様々なコーディネートを行っております。'}) %>
+      </div>
+    </div>
+    <div class="p-works__body">
+      <div class="p-works__cards">
+        <%- include('../project/_p-cards',{section: 'blog'}) %>
+      </div>
+      <div class="p-works__button">
+        <%- include('../component/_c-button',{text: 'blog', modifire: 'c-button--blog'}) %>
+      </div>
+    </div>
+  </div>
+
+</div>
