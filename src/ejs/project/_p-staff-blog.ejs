@@ -1,0 +1,20 @@
+<div class="p-staff-blog">
+  <div class="p-staff-blog__inner">
+    <div class="p-staff-blog__head">
+      <div class="p-staff-blog__title">
+        <%- include('../project/_p-section-title',{enTitle: 'staff blog', jaTitle:'スタッフブログ'}) %>
+      </div>
+      <div class="p-staff-blog__description">
+        <%- include('../component/_c-section-description',{text: '当社には、総勢24名のスタッフがおります。<br>ひとり一人、ブログを投稿しておりますので、是非ご覧ください。意外な一面が見れるかもしれません！'}) %>
+      </div>
+    </div>
+    <div class="p-staff-blog__body">
+      <div class="p-staff-blog__cards">
+        <%- include('../project/_p-cards',{section: 'staff-blog'}) %>
+      </div>
+      <div class="p-staff-blog__button">
+        <%- include('../component/_c-button',{text: 'staff blog', modifire: 'c-button--staff-blog'}) %>
+      </div>
+    </div>
+  </div>
+</div>
